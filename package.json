@@ -1,0 +1,24 @@
+{
+  "name": "automationtestingjs",
+  "version": "1.0.0",
+  "description": "## 📖 Описание Репозиторий для автоматизации тестирования на **JavaScript** с использованием современных инструментов и технологий.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Napster128/AutomationTestingJS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Napster128/AutomationTestingJS/issues"
+  },
+  "homepage": "https://github.com/Napster128/AutomationTestingJS#readme",
+  "devDependencies": {
+    "codeceptjs": "^2.0.0",
+    "puppeteer": "^24.19.0"
+  }
+}
