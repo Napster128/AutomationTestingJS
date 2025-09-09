@@ -3,7 +3,7 @@
  *
  * @param {number} n - factorial argument
  *
- * @returns {number}  result of n! = 1 * 2 * 3 * ... * n
+ * @returns {number} result of n! = 1 * 2 * 3 * ... * n
  */
 function factorial(n) {
     let result = 1;

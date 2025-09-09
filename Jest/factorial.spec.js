@@ -1,11 +1,10 @@
 import factorial from './factorial';
 
-describe('factorial', () => {
-  it('1! = 1', () => {
+describe('factorial()', () => {
+  it('should calculate 1! as 1', () => {
     expect(factorial(1)).toBe(1);
   });
-
-  it('3! = 6', () => {
+  it('should calculate 3! as 6', () => {
     expect(factorial(3)).toBe(6);
   });
 })
