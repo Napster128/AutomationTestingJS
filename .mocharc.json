@@ -1,0 +1,7 @@
+{
+  "extension": ["js"],
+  "spec": ["Mocha/**/*.spec.js"],
+  "recursive": true,
+  "timeout": 5000,
+  "reporter": "spec"
+}

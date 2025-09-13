@@ -1,0 +1,9 @@
+{
+  "name": "codeceptjs",
+  "private": true,
+  "scripts": {},
+  "devDependencies": {
+    "codeceptjs": "^3.7.4",
+    "puppeteer": "^24.20.0"
+  }
+}
