@@ -12,9 +12,10 @@ exports.config = {
   output: './output',
   helpers: {
     Puppeteer: {
-      url: 'http://localhost',
+      url: 'http://example.com',
       show: true,
-      windowSize: '1200x900'
+      windowSize: '1200x900',
+      waitForAction: 2888
     }
   },
   include: {

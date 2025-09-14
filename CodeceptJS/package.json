@@ -4,6 +4,7 @@
   "scripts": {},
   "devDependencies": {
     "codeceptjs": "^3.7.4",
-    "puppeteer": "^24.20.0"
+    "puppeteer": "^24.20.0",
+    "puppeteer-core": "^24.20.0"
   }
 }
