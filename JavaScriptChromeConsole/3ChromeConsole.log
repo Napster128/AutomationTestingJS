@@ -1,0 +1,61 @@
+ v = 200;
+f()
+function f(){
+    alert(s);
+    alert(v);
+    var s = 100;
+}
+undefined
+ v = 200;
+f()
+function f(){
+    alert(v);
+    var s = 100;
+    alert(s);
+}
+undefined
+ v = 200;
+f()
+function f(){
+    alert(s);
+    alert(v);
+    let s = 100;
+}
+VM1363:4 Uncaught ReferenceError: Cannot access 's' before initialization
+    at f (<anonymous>:4:11)
+    at <anonymous>:2:1
+f @ VM1363:4
+(anonymous) @ VM1363:2
+ v = 200;
+f()
+function f(){
+    alert(s);
+    alert(v);
+    while (false) {
+        var s = 100;
+    }
+}
+undefined
+ v = 200;
+f()
+function f(){
+
+    while (false) {
+        let s = 100;
+    }
+}
+undefined
+ v = 200;
+f()
+function f(){
+    while (false) {
+        let s = 100;
+    }
+        alert(s);
+        alert(v);
+}
+VM1416:7 Uncaught ReferenceError: s is not defined
+    at f (<anonymous>:7:15)
+    at <anonymous>:2:1
+f @ VM1416:7
+(anonymous) @ VM1416:2

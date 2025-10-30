@@ -1,0 +1,70 @@
+object = {
+    field: {
+        subfield: undefined
+    }
+}
+{field: {…}}
+object && object.field && object.field.subfield
+undefined
+object = {
+    field: {
+        subfield: 'aaa'
+    }
+}
+{field: {…}}
+object && object.field && object.field.subfield
+'aaa'
+var flag = null
+undefined
+10 == '10' && flag
+null
+0 && 1
+0
+1 && 2
+2
+object = {
+    field: {
+        subfield: undefined
+    }
+}
+{field: {…}}
+object && object.field && object.field.subfield || 'bbbb'
+'bbbb'
+function printNumbers() {
+    for (var index = 0; index < 10; ++index) {
+        console.log(index)
+        
+    }
+    return 'OK'
+}
+printNumbers();
+VM350:3 0
+VM350:3 1
+VM350:3 2
+VM350:3 3
+VM350:3 4
+VM350:3 5
+VM350:3 6
+VM350:3 7
+VM350:3 8
+VM350:3 9
+'OK'
+function printNumbers() {
+    for (var index = 0; index < 10; index++) {
+        console.log(index)
+        
+    }
+    return 'OK'
+}
+printNumbers();
+VM354:3 0
+VM354:3 1
+VM354:3 2
+VM354:3 3
+VM354:3 4
+VM354:3 5
+VM354:3 6
+VM354:3 7
+VM354:3 8
+VM354:3 9
+'OK'

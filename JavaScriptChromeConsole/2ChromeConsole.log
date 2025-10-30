@@ -1,0 +1,56 @@
+ object = {
+                field:100,
+                method: function(){
+                    this.field = 101 
+                }
+              }
+console.log(object.field)
+console.log(object['field'])
+object.method
+VM825:7 100
+VM825:8 100
+ƒ (){
+                    this.field = 101 
+                }
+ object = {
+                field:100,
+                method: function(){
+                    this.field = 101; 
+                }
+              };
+console.log(object);
+object.method();
+VM887:7 {field: 100, method: ƒ}field: 101method: ƒ ()length: 0name: "method"prototype: {}arguments: nullcaller: null[[FunctionLocation]]: VM887:3[[Prototype]]: ƒ ()[[Scopes]]: Scopes[1][[Prototype]]: Object
+undefined
+var arr = [0,1,2];
+console.log(arr[1]);
+array.push(3);
+console.log(arr['1']);
+VM1155:2 1
+VM1155:3 Uncaught ReferenceError: array is not defined
+    at <anonymous>:3:1
+(anonymous) @ VM1155:3
+var arr = [0,1,2];
+console.log(arr[1]);
+arr.push(3);
+console.log(arr['1']);
+VM1165:2 1
+VM1165:4 1
+undefined
+var arr = [0,1,2];
+console.log(arr[1]);
+arr.push(3);
+console.log(arr['1'], arr);
+VM1189:2 1
+VM1189:4 1 (4) [0, 1, 2, 3]0: 01: 12: 23: 3length: 4[[Prototype]]: Array(0)
+undefined
+var v =200;
+undefined
+ v = 200;
+f()
+function f(){
+    alert(s);
+    alert(v);
+    var s = 100;
+}
+undefined

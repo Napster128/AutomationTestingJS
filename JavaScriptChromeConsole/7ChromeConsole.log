@@ -1,0 +1,54 @@
+function f() {
+    try {
+        throw new Error('error')
+    } catch (err) {
+    return 1
+    }
+}
+f()
+1
+function f() {
+    try {
+        throw new Error('error')
+    } catch (err) {
+    return 1
+    }
+    return 3
+}
+f()
+1
+function f() {
+    try {
+        throw new Error('error')
+    } catch (err) {
+    return 1
+    }
+    
+} return 3
+f()
+VM217:8 Uncaught SyntaxError: Illegal return statement
+function f() {
+    try {
+        throw new Error('error')
+    } catch (err) {
+    return 1
+    }
+return 3
+}
+f()
+1
+function f() {
+    try {
+        throw new Error('error')
+    } catch (err) {
+    return 1
+    }
+    finally{
+        return 2
+    }
+return 3
+}
+f()
+2
+0 || 1
+1

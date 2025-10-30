@@ -1,0 +1,121 @@
+var object = {
+    x:1,
+    y:2,
+    sum: function(){
+        return this.x + this.y
+    }
+}
+console.log(object.sum)
+VM471:8 ƒ (){
+        return this.x + this.y
+    }
+undefined
+var object = {
+    x:1,
+    y:2,
+    sum: function(){
+        return this.x + this.y
+    }
+}
+console.log(object.sum())
+VM480:8 3
+undefined
+var object = {
+    x:1,
+    y:2,
+    sum: function(){
+        return this.x + this.y
+    }
+}
+var fun = function () {
+    return this.x +3
+}
+object.fun2 = fun
+console.log(object.sum() + object.fun2)
+VM594:12 3function () {
+    return this.x +3
+}
+undefined
+var obj = {
+x: 1,
+y: 2,
+sum: function() {
+return this.x + this.y;
+}
+};
+var fun = function() { return this.x + 3};
+obj.fun2 = fun;
+console.log(obj.sum() + obj.fun2());
+VM599:10 7
+undefined
+var fun1 = function(x) { this.x = x}
+var obj = {};
+fun1.call(obj, 5);
+console.log(obj.x);
+VM603:4 5
+undefined
+var fun1 = function(x) { this.x = x}
+var obj = {};
+var fun2 = fun1.bind(obj);
+fun2(5);
+console.log(obj.x);
+VM607:5 5
+undefined
+var fun1 = function(x) { this.x = x}
+var obj = {};
+var fun2 = fun1.bind(obj, 5);
+fun2();
+console.log(obj.x);
+VM611:5 5
+undefined
+var func = function() {
+this.x = 0;
+this.y = 0;
+}
+var point = new func();
+undefined
+point
+func {x: 0, y: 0}x: 0y: 0[[Prototype]]: Objectconstructor: ƒ ()length: 0name: "func"prototype: {}constructor: ƒ ()[[Prototype]]: Objectarguments: nullcaller: null[[FunctionLocation]]: VM615:1[[Prototype]]: ƒ ()[[Scopes]]: Scopes[1][[Prototype]]: Object
+var func = function(x, y) { this.x = x; this.y = y;}
+var point = new func(1, 2);
+console.log(point.x);
+VM643:3 1
+undefined
+class Point {
+constructor() {
+this.x = 0;
+this.y = 0;
+}
+}
+var point = new Point();
+undefined
+point
+Point {x: 0, y: 0}
+class Point {
+constructor() {
+this.x = 0;
+this.y = 0;
+}
+length() {
+return Math.sqrt(this.x * this.x + this.y * this.y);
+}
+}
+console.log(new Point().length());
+VM657:10 0
+undefined
+class Parent {
+constructor() {
+this.x = 0;
+}
+}
+class Child extends Parent {
+constructor() {
+super();
+this.y = 0;
+}
+}
+undefined
+var baby = new Child() 
+undefined
+baby
+Child {x: 0, y: 0}x: 0y: 0[[Prototype]]: Parent
