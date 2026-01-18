@@ -1,0 +1,49 @@
+let arr = [0, 1];
+let [a, b] = arr;
+console.log(a + ', ' + b)
+VM23:3 0, 1
+undefined
+let arr = [0, 1, 2];
+let [a, b] = arr;
+console.log(a + ', ' + b)
+VM37:3 0, 1
+undefined
+let arr = [0];
+let [a, b] = arr;
+console.log(a + ', ' + b)
+VM40:3 0, undefined
+undefined
+let [x, y = 1, z = 2] = arr;
+console.log(x + ', ' + y + ', ' + z)
+VM44:2 0, 1, 2
+undefined
+ let object = {x: 1, y:2}
+let {x,y} = object
+undefined
+x
+1
+y
+2
+let object = {x: 1, y:2}
+let func = function (obj) {
+    return obj.x + obj.y
+}
+func(object)
+3
+let object = {x: 1, y:2}
+let func = function (obj) {
+    let {x,y} = obj
+    return x + y
+}
+func(object)
+3
+let object = {x: 1, y:2}
+let func = function ({x,y}) {
+    return x + y
+}
+func(object)
+3
+let object = {x: 1, y:2}
+let func =  ({x,y}) => x+y
+func(object)
+3

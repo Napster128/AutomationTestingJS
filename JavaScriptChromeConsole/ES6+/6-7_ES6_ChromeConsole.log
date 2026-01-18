@@ -1,0 +1,57 @@
+console.log('1');
+setTimeout(() => console.log('2'), 1000)
+console.log(3);
+VM40:1 1
+VM40:3 3
+undefined
+VM40:2 2
+console.log('1');
+setTimeout(() => console.log('2'), 0)
+console.log(3);
+VM44:1 1
+VM44:3 3
+undefined
+VM44:2 2
+console.log('1');
+setTimeout(() => console.log('2'), 3000)
+console.log(3);
+VM61:1 1
+VM61:3 3
+undefined
+VM61:2 2
+let promise = new Promise((resolve, reject) => {
+setTimeout(() => {
+resolve("result");
+}, 10000);
+});
+promise.then(res => console.log(res));
+Promise {<pending>}[[Prototype]]: Promisecatch: ƒ catch()constructor: ƒ Promise()finally: ƒ finally()then: ƒ then()length: 2name: "then"arguments: (...)caller: (...)[[Prototype]]: ƒ ()[[Scopes]]: Scopes[0]Symbol(Symbol.toStringTag): "Promise"[[Prototype]]: Object[[PromiseState]]: "fulfilled"[[PromiseResult]]: undefined
+VM65:6 result
+fetch('https://otus.ru')
+    .then(res => console.log(res))
+Promise {<pending>}
+fetch('https://otus.ru')
+    .then(res => console.log(res))
+Promise {<pending>}
+fetch('https://otus.ru')
+    .then(res => console.log(res))
+Promise {<pending>}
+fetch('https://otus.ru')
+    .then(response => response.staus)
+    .then(status => console.log(status))
+Promise {<pending>}[[Prototype]]: Promise[[PromiseState]]: "rejected"[[PromiseResult]]: TypeError: Failed to fetch
+    at <anonymous>:1:1
+async function f() {
+return Promise.resolve(1);
+}
+f().then(alert);
+Promise {<fulfilled>: undefined}
+async function f() {
+let promise = new Promise((resolve, reject) => {
+setTimeout(() => resolve("готово!"), 1000)
+});
+let result = await promise; // будет ждать
+alert(result); // ?
+}
+f();
+Promise {<pending>}[[Prototype]]: Promise[[PromiseState]]: "fulfilled"[[PromiseResult]]: undefined

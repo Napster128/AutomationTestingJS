@@ -1,0 +1,165 @@
+0.25 + 0.5 === 0.75
+true
+0.1 + 0.2 === 0.3
+false
+1e-2
+0.01
+0.1 + 0.2
+0.30000000000000004
+Math.abs(0.1 + 0.2 - 0.3) < 0.0000001
+true
+ var str1 = 'Hello\n' + 'this is multiline';
+console.log(str1);
+// ?
+var str2 = `Hello
+this is multiline`;
+console.log(str2);
+VM239:2 Hello
+this is multiline
+VM239:6 Hello
+this is multiline
+undefined
+var htmlExample = `
+<div>
+<span>'Hello"from\`</span>
+<div>
+`;
+undefined
+htmlExample
+'\n<div>\n<span>\'Hello"from`</span>\n<div>\n'
+var world = 'World';
+var expected = `Hello ${world}`;
+console.log(expected);
+VM308:3 Hello World
+undefined
+console.log(`1 + 2 = ${1 + 2}`)
+VM347:1 1 + 2 = 3
+undefined
+function func() {
+if (true) {
+var tmp = 123;
+}
+console.log(tmp); // 123
+}
+function func() {
+if (true) {
+let tmp = 123;
+}
+console.log(tmp); // ReferenceError: tmp is not defined
+}
+undefined
+func()
+VM351:11 Uncaught ReferenceError: tmp is not defined
+    at func (<anonymous>:11:13)
+    at <anonymous>:1:1
+func @ VM351:11
+(anonymous) @ VM377:1
+let foo = 'abc';
+foo = 'def';
+console.log(foo);
+// def
+const foo2 = 'abc';
+foo2 = 'def';
+VM381:3 def
+VM381:6 Uncaught TypeError: Assignment to constant variable.
+    at <anonymous>:6:6
+(anonymous) @ VM381:6
+ const object = {x: 1}
+object.x = 20
+console.log(object)
+VM537:3 {x: 20}x: 20[[Prototype]]: Objectconstructor: ƒ Object()assign: ƒ assign()create: ƒ create()defineProperties: ƒ defineProperties()defineProperty: ƒ defineProperty()entries: ƒ entries()freeze: ƒ freeze()fromEntries: ƒ fromEntries()getOwnPropertyDescriptor: ƒ getOwnPropertyDescriptor()getOwnPropertyDescriptors: ƒ getOwnPropertyDescriptors()getOwnPropertyNames: ƒ getOwnPropertyNames()getOwnPropertySymbols: ƒ getOwnPropertySymbols()getPrototypeOf: ƒ getPrototypeOf()groupBy: ƒ groupBy()hasOwn: ƒ hasOwn()is: ƒ is()isExtensible: ƒ isExtensible()isFrozen: ƒ isFrozen()isSealed: ƒ isSealed()keys: ƒ keys()length: 1name: "Object"preventExtensions: ƒ preventExtensions()prototype: {__defineGetter__: ƒ, __defineSetter__: ƒ, hasOwnProperty: ƒ, __lookupGetter__: ƒ, __lookupSetter__: ƒ, …}seal: ƒ seal()setPrototypeOf: ƒ setPrototypeOf()values: ƒ values()arguments: (...)caller: (...)[[Prototype]]: ƒ ()[[Scopes]]: Scopes[0]hasOwnProperty: ƒ hasOwnProperty()isPrototypeOf: ƒ isPrototypeOf()propertyIsEnumerable: ƒ propertyIsEnumerable()toLocaleString: ƒ toLocaleString()toString: ƒ toString()valueOf: ƒ valueOf()__defineGetter__: ƒ __defineGetter__()__defineSetter__: ƒ __defineSetter__()__lookupGetter__: ƒ __lookupGetter__()__lookupSetter__: ƒ __lookupSetter__()__proto__: (...)get __proto__: ƒ __proto__()set __proto__: ƒ __proto__()
+undefined
+object = 20
+VM619:1 Uncaught TypeError: Assignment to constant variable.
+    at <anonymous>:1:8
+(anonymous) @ VM619:1
+function f() {
+    return 2
+}
+const x = f()
+undefined
+x
+2
+function f() {
+    return 5
+}
+const x = f()
+undefined
+function f() {
+    return 2
+}
+undefined
+x
+5
+let f = function (v) { return v + 1; }
+f = v => v + 1;
+VM745:1 Uncaught SyntaxError: Identifier 'f' has already been declared
+f = function (v) { return v + 1; }
+f = v => v + 1;
+v => v + 1
+f(49)
+50
+f = (v) => {return v + 1};
+(v) => {return v + 1}
+f = x => x + 5
+x => x + 5
+f = x => return x + 55 
+VM947:1 Uncaught SyntaxError: Unexpected token 'return'
+f = x => {return x + 55} 
+x => {return x + 55}
+f(1)
+56
+let hello = function (name) {
+    return `hello ` + name;
+}
+undefined
+let hello = function (name) {
+    return 'hello '  + name;
+}
+undefined
+hello('Albert')
+'hello Albert'
+let hello = (name) => {
+    return 'hello '  + name;
+}
+undefined
+hello('World')
+'hello World'
+hello = (name) => {
+    return 'hello '  + name;
+}
+(name) => {
+    return 'hello '  + name;
+}
+hello('World')
+'hello World'
+hello = (name) => {
+    'hello '  + name;
+}
+(name) => {
+    'hello '  + name;
+}
+hello = (name) => 'hello '  + name
+(name) => 'hello '  + name
+hello('World')
+'hello World'
+hello = name => 'hello '  + name
+name => 'hello '  + name
+hello('World')
+'hello World'
+hello = num => {
+    num++;
+    num+=2;
+    return num
+}
+num => {
+    num++;
+    num+=2;
+    return num
+}
+hello(6)
+9
+let returningJson = text => ({text: text})
+undefined
+returningJson("Hello")
+{text: 'Hello'}text: "Hello"[[Prototype]]: Object
